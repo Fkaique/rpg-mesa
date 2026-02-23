@@ -49,6 +49,5 @@ app.delete('/rooms/:name', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Servidor inicializado em http://localhost:${port}`);
-
+    console.log(`Servidor inicializado na porta: ${port}`);
 })
