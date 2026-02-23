@@ -8,7 +8,6 @@ const deletaNomeSala = document.getElementById('nameDeleteRoom')
 let state = "Conectando ao servidor..."
 
 function checkServer() {
-    serverState.textContent = "Conectando ao servidor..."
 
     fetch("https://rpg-mesa-q0t2.onrender.com/health")
         .then(res => {
