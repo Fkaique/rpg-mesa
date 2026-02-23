@@ -7,7 +7,7 @@ const deletaNomeSala = document.getElementById('nameDeleteRoom')
 criarSala.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    fetch('http://localhost:3000/rooms', {
+    fetch('https://rpg-mesa-q0t2.onrender.com/rooms', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -24,12 +24,12 @@ criarSala.addEventListener('submit', (e) => {
 deletaSala.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    fetch(`http://localhost:3000/rooms/${deletaNomeSala.value}`, { method: 'DELETE' })
+    fetch(`https://rpg-mesa-q0t2.onrender.com/rooms/${deletaNomeSala.value}`, { method: 'DELETE' })
         .then(res => res.json())
         .then(data => console.log("Deletado", data))
 })
 
 
-fetch('http://localhost:3000/rooms')
+fetch('https://rpg-mesa-q0t2.onrender.com/rooms')
     .then(res => res.json())
     .then(data => console.log("Lista:", data))
