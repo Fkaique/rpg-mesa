@@ -8,6 +8,10 @@ app.use(cors())
 
 const rooms = []
 
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: "ok" })
+})
+
 app.get('/rooms', (req, res) => {
     res.send(rooms)
 })
